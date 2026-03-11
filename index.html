@@ -1,0 +1,206 @@
+<!DOCTYPE html> <html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Mandvi Shukla | Design Portfolio</title>  
+<style>  
+/* CSS Variables for easy editing */  
+:root {  
+  --bg-color: #ffffff;  
+  --text-color: #1a1a1a;  
+  --accent: #ff6b2c;  
+  --secondary: #f5f6fa;  
+  --font-main: 'Segoe UI', Arial, sans-serif;  
+}  
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; } /* Smooth scrolling effect */
+
+body {
+font-family: var(--font-main);
+background: linear-gradient(135deg, #fff6f2, #f3f7ff);
+color: var(--text-color);
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+/* Background Gradients */
+body::before, body::after {
+content: "";
+position: fixed;
+width: 400px;
+height: 400px;
+filter: blur(60px);
+z-index: -1;
+opacity: 0.4;
+}
+body::before { background: radial-gradient(circle, var(--accent), transparent); top: -100px; left: -100px; }
+body::after { background: radial-gradient(circle, #2563eb, transparent); bottom: -100px; right: -100px; }
+
+/* Navigation */
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 8%;
+position: sticky;
+top: 0;
+background: rgba(255, 255, 255, 0.8);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(0,0,0,0.05);
+z-index: 1000;
+}
+.logo { font-weight: 800; font-size: 1.4rem; color: var(--text-color); }
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--text-color); font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: var(--accent); }
+
+/* Hero Section */
+.hero {
+padding: 120px 8% 80px;
+max-width: 1200px;
+margin: auto;
+text-align: center;
+}
+.hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 20px; line-height: 1.1; }
+.hero p { max-width: 650px; margin: 0 auto 35px; color: #555; font-size: 1.2rem; }
+
+.cta-button {
+display: inline-block;
+background: var(--text-color);
+color: white;
+padding: 16px 36px;
+border-radius: 50px;
+text-decoration: none;
+font-weight: 600;
+transition: 0.3s;
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.cta-button:hover { background: var(--accent); transform: translateY(-3px); }
+
+/* Portfolio Grid */
+.portfolio { padding: 80px 8%; background: var(--secondary); }
+.section-title { text-align: center; font-size: 2.2rem; margin-bottom: 50px; }
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+max-width: 1200px;
+margin: auto;
+}
+.project-card {
+background: white;
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+transition: 0.4s ease;
+}
+.project-card:hover { transform: translateY(-10px); }
+.project-image { width: 100%; height: 250px; object-fit: cover; background: #eee; }
+.project-info { padding: 25px; }
+.project-info h3 { margin-bottom: 8px; font-size: 1.3rem; }
+.project-info p { color: #666; font-size: 0.95rem; }
+.tags { margin-top: 15px; display: flex; gap: 8px; }
+.tag { font-size: 0.7rem; background: #f0f0f0; padding: 5px 12px; border-radius: 20px; font-weight: 600; text-transform: uppercase; }
+
+/* Contact Form */
+.contact-section { padding: 100px 8%; max-width: 700px; margin: auto; text-align: center; }
+.contact-form { margin-top: 40px; text-align: left; }
+input, textarea { 
+width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; 
+border-radius: 12px; font-family: inherit; font-size: 1rem;
+}
+.submit-btn { 
+background: var(--text-color); color: white; border: none; 
+padding: 15px; border-radius: 12px; width: 100%; cursor: pointer; font-weight: 600; 
+}
+
+footer { text-align: center; padding: 40px; color: #888; border-top: 1px solid #eee; }
+
+/* Mobile view */
+@media (max-width: 768px) { .nav-links { display: none; } }
+</style>
+
+</head>  
+<body>  
+
+<nav>  
+  <div class="logo">Mandvi Shukla</div>  
+  <div class="nav-links">  
+    <a href="#work">Work</a>  
+    <a href="#about">About</a>  
+    <a href="#contact">Contact</a>  
+  </div>  
+</nav>  
+
+<section class="hero">  
+  <h1>Creative UI/UX & Brand Designer</h1>  
+  <p>I design modern brand identities and user-friendly mobile interfaces. Turning complex ideas into simple visuals.</p>  
+  <a href="#contact" class="cta-button">Start a Project</a>  
+</section>  
+
+<section id="work" class="portfolio">  
+  <h2 class="section-title">Featured Projects</h2>  
+  <div class="grid">  
+    <div class="project-card">  
+      <img src="https://i.ibb.co/mrh92Cv8/avi-Cafe.jpg" alt="Avi Cafe" class="project-image">  
+      <div class="project-info">  
+        <h3>Avi Cafe Branding</h3>  
+        <p>A vibrant visual identity for a modern coffee shop.</p>  
+        <div class="tags"><span class="tag">Logo</span><span class="tag">Identity</span></div>  
+      </div>  
+    </div>  
+    <div class="project-card">  
+      <img src="https://i.ibb.co/MyH2R7Hs/food.jpg" alt="Food App" class="project-image">  
+      <div class="project-info">  
+        <h3>Foodie App UI</h3>  
+        <p>A clean and intuitive interface for food delivery.</p>  
+        <div class="tags"><span class="tag">Mobile</span><span class="tag">UI/UX</span></div>  
+      </div>  
+    </div>  
+    <div class="project-card">  
+      <img src="https://i.ibb.co/zWdThmzX/Aurora-Coffee.jpg" alt="Aurora" class="project-image">  
+      <div class="project-info">  
+        <h3>Aurora Coffee</h3>  
+        <p>Professional logo design with a minimalist aesthetic.</p>  
+        <div class="tags"><span class="tag">Branding</span><span class="tag">Minimal</span></div>  
+      </div>  
+    </div>  
+  </div>  
+</section>  
+
+<section id="about" style="padding: 100px 8%; max-width: 800px; margin: auto; text-align: center;">
+  <h2 class="section-title">About</h2>
+  <p style="color:#555; font-size:1.1rem; margin-bottom:20px;">
+    Hello, I'm Mandvi Shukla, a creative designer focused on building modern brand identities and intuitive digital interfaces.
+  </p>
+  <p style="color:#555; font-size:1.05rem;">
+    I enjoy transforming complex ideas into simple, user-friendly visual experiences. My work includes logo design, branding,
+    and UI/UX design for mobile applications.
+  </p>
+  <div style="margin-top:25px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
+    <span class="tag">UI/UX</span>
+    <span class="tag">Branding</span>
+    <span class="tag">Mobile Design</span>
+    <span class="tag">Figma</span>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">  
+  <h2 class="section-title">Get in Touch</h2>  
+  <p>Available for freelance projects. Let's build something cool!</p>  
+  <form class="contact-form">  
+    <input type="text" placeholder="Full Name" required>  
+    <input type="email" placeholder="Email Address" required>  
+    <textarea rows="5" placeholder="Tell me about your vision..."></textarea>  
+    <button type="submit" class="submit-btn">Send Message</button>  
+  </form>  
+</section>  
+
+<footer>  
+  <p>© 2026 Mandvi Shukla | Design Portfolio</p>  
+</footer>  
+
+</body>  
+</html>
